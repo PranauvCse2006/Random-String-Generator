@@ -9,7 +9,7 @@ function App() {
 
 
     let result="";
-    for(let i=0;i<length;i++){
+    for(let i=0;i<Number(length);i++){
       const index=Math.floor(Math.random()*characters.length);
       result+=characters[index];
 
@@ -34,7 +34,7 @@ function App() {
     <label>Enter the length of the string</label>
 
 
-    <input type="number" placeholder= "Enter length "  className="flex-1 p-3 rounded" value={length} onChange={(e)=>setLength(Number(e.target.value))}                   /><br/>
+    <input type="number" placeholder= "Enter length "  className="flex-1 p-3 rounded" value={length} onChange={(e)=>setLength(e.target.value)}                   /><br/>
 
 
     <label>Generated string will appear here</label>  
